@@ -1,0 +1,10 @@
+.carousel{
+    margin-top: 60px;
+}
+
+@media (max-width: 991px) {
+    .carousel-item{
+        /* margin-top: 0%; */
+        width: 100%;
+    }
+}

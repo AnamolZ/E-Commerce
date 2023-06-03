@@ -1,0 +1,42 @@
+.bottom {
+    margin-top: 4%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.bottom-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.bottom-content h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.bottom-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.bottom-content li {
+    margin-bottom: 10px;
+}
+
+.address p {
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .bottom-content {
+        justify-content: center;
+    }
+    
+    .bottom-content > div {
+        flex-basis: 100%;
+    }
+}
