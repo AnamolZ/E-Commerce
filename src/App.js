@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Navigation from './Component/Navigation';
@@ -7,40 +7,15 @@ import Bottom from './Component/Bottom';
 import data from './database.json';
 import Trending from './Component/Trending';
 import OnSale from './Component/OnSale';
-import Cart from './Component/Cart';
-import productData from './productData.json';
+import CartItem from './Component/CartItem';
 
 function App() {
   const [cartCount, setCartCount] = useState(0);
-  const [desiredProduct, setDesiredProduct] = useState(null);
 
   const addToCartHandler = (itemId) => {
-    setCartCount((prevCount) => prevCount + 1);
+    setCartCount(prevCount => prevCount + 1);
     console.log(`Item ID ${itemId} added to cart`);
   };
-
-  useEffect(() => {
-    const updateDesiredProduct = () => {
-      const currentURL = window.location.href;
-      const url = new URL(currentURL);
-      const lastSegment = url.pathname.split('/').pop();
-      const lastLetter = lastSegment.charAt(lastSegment.length - 1);
-      const lastLetterAsInt = parseInt(lastLetter);
-      console.log(lastLetterAsInt);
-
-      const desiredProductId = lastLetterAsInt;
-      const product = productData.find((product) => product.id === desiredProductId);
-      setDesiredProduct(product);
-    };
-
-    updateDesiredProduct();
-
-    const intervalId = setInterval(updateDesiredProduct, 0);
-
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, []);
 
   return (
     <Router>
@@ -48,17 +23,7 @@ function App() {
         <Navigation />
         <div className="body">
           <Routes>
-            <Route
-              path="/:itemName"
-              element={
-                desiredProduct && (
-                  <Cart
-                    key={desiredProduct.id}
-                    {...desiredProduct}
-                  />
-                )
-              }
-            />
+            <Route path="/details/:itemName/:id" element={<CartItem />} />
             <Route
               path="/"
               element={
@@ -66,7 +31,7 @@ function App() {
                   <Trending />
                   <div className="container">
                     <ul className="items">
-                      {data.images.map((item) => (
+                      {data.images.map(item => (
                         <li key={item.id}>
                           <OnSale
                             itemname={item.itemname}
@@ -87,7 +52,6 @@ function App() {
               }
             />
           </Routes>
-
           <div className="bottom">
             <Bottom />
           </div>

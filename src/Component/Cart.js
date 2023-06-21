@@ -1,10 +1,14 @@
 import React from 'react';
 import './Cart.css';
+import { useClickCounter } from './ClickCounter';
 
 const Cart = (props) => {
   const changeImage = (element) => {
     document.getElementById('main_product_image').src = element.src;
   };
+  
+// eslint-disable-next-line
+  const { count, handleClick } = useClickCounter();
 
   return (
     <div className="container mt-5 mb-5">
@@ -19,7 +23,7 @@ const Cart = (props) => {
                 <ul id="thumbnail">
                   {props.src.map((src, index) => (
                     <li key={index}>
-                      <img onClick={(e) => changeImage(e.target)} src={src} width="70" alt={`Thumbnail ${index + 1}`} />
+                      <img onClick={() => changeImage(src)} src={src} width="70" alt={`Thumbnail ${index + 1}`} />
                     </li>
                   ))}
                 </ul>
@@ -47,17 +51,17 @@ const Cart = (props) => {
               <div className="product-details">
                 <b>Product Details</b>
                 <ul style={{ listStyleType: "disc" }}>
-                    <li>
-                        <p className="details">{props.aboutproduct}</p>
-                    </li>
-                    <li>
-                        <p className="details">{props.minidetails}</p>
-                    </li>
+                  <li>
+                    <p className="details">{props.aboutproduct}</p>
+                  </li>
+                  <li>
+                    <p className="details">{props.minidetails}</p>
+                  </li>
                 </ul>
-            </div>
+              </div>
               <div className="buttons d-flex flex-row mt-5 gap-3">
                 <button className="btn btn-outline-dark">Buy Now</button>
-                <button className="btn btn-dark">Add to Cart</button>
+                <button className="btn btn-dark" onClick={handleClick}>Add to Cart</button>
               </div>
             </div>
           </div>
