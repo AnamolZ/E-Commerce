@@ -5,11 +5,9 @@ import AddtoCart from './AddtoCart';
 
 function OnSale(props) {
   const { itemname, price, img, cartCount, setCartCount, onClick } = props;
-  console.log(itemname);
   const trimmedItemName = itemname.slice(0, -1);
   const itemId = itemname.toLowerCase().replace(/\s/g, '-');
   let lastElements = itemname.charAt(itemname.length - 1);
-  console.log(lastElements);
 
   const addToCartHandler = () => {
     setCartCount(cartCount + 0);

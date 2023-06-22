@@ -14,7 +14,6 @@ function App() {
 
   const addToCartHandler = (itemId) => {
     setCartCount(prevCount => prevCount + 1);
-    console.log(`Item ID ${itemId} added to cart`);
   };
 
   return (
