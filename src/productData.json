@@ -68,5 +68,47 @@
     "price": "Rs 560",
     "productreview": "Product Review 5/10",
     "aboutproduct": "Purepet is an economical diet that can be served as a whole meal, fulfilling all the nutritional needs of your pet"
+  },
+  {
+    "id": 6,
+    "src": [
+      "https://static.sastodeal.com/media/seller/209355/c/o/colorbuds_black_1.jpg",
+      "https://static.sastodeal.com/media/seller/209355/c/o/colorbuds-01_2_1.jpg"
+    ],
+    "width": "70",
+    "alt": "Thumbnail 6",
+    "productname": "Hifuture Colorbuds Bluetooth 5.0 IP65 Water Resistant",
+    "minidetails": "True Wireless Stereo 5.0, Stable Connection, Smart Touch Command, Hi future Soft Bass Sound, Superior Talking Quality, Two Master Technology, IPX5 Waterproof, Light & perfect Fit in Ear",
+    "price": "Rs 2,799",
+    "productreview": "Product Review 8/10",
+    "aboutproduct": "Hifuture Colorbuds Bluetooth 5.0 IP65 Water Resistant True Wireless Earbuds with Smart Touch Control and Hi future Soft Bass Sound for All Smartphones (Black)"
+  },
+  {
+    "id": 7,
+    "src": [
+      "https://static.sastodeal.com/media/seller/547/1/4/1427be83a9cdb72379979b4557310d00_1_.jpg",
+      "https://static.sastodeal.com/media/seller/547/5/5/55344e0c30f5f0d4811bbb57ab3910c6_1_.jpg"
+    ],
+    "width": "70",
+    "alt": "Thumbnail 7",
+    "productname": "Hisense 43 inch Android Smart Full HD LED TV",
+    "minidetails": "The Hisense 43A6200f. It features a 43 inches screen display with 1920X1080 pixels and Full high-definition display technology",
+    "price": "Rs 58,712",
+    "productreview": "Product Review 4/10",
+    "aboutproduct": "Enjoy operating on the Android system, go to the play store, and download applications to your Tv. Connect to more external devices via Bluetooth, HDMI ports, USB ports, and optical ports available on your TV. Enjoy a frameless screen with pre-installed applications and an in-built decoder."
+  },
+  {
+    "id": 8,
+    "src": [
+      "https://static.sastodeal.com/media/seller/209355/s/o/sound_mini_tch-1.png",
+      "https://static.sastodeal.com/media/seller/209355/s/o/sound_mini_tch.png"
+    ],
+    "width": "70",
+    "alt": "Thumbnail 8",
+    "productname": "Hifuture Soundmini Black Bluetooth 5.0",
+    "minidetails": "True Wireless Stereo 5.0, Stable Connection, Smart Touch Command, Hi future Soft Bass Sound, Superior Talking Quality, Two Master Technology, IPX5 Waterproof, Light & perfect Fit in Ear",
+    "price": "Rs 4,399",
+    "productreview": "Product Review 9/10",
+    "aboutproduct": "Stereo enjoyment-Connect two sound minis at the same time, there will be supreme stereo enjoyment, Hands-free call-connect to Bluetooth to call, very convenient, you can do other things at the same time, Music playback time: 12 Hours, Water resistance: IPX4"
   }
 ]

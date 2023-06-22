@@ -1,17 +1,15 @@
 import React from 'react';
 
-function AddtoCart(props) {
+const AddToCart = React.memo(({ onAddToCart }) => {
   const handleClick = () => {
-    if (props.onAddToCart) {
-      props.onAddToCart();
+    if (onAddToCart) {
+      onAddToCart();
     }
   };
 
   return (
-    <div>
-      <button onClick={handleClick}>Add to Cart</button>
-    </div>
+    <button onClick={handleClick}>Add to Cart</button>
   );
-}
+});
 
-export default AddtoCart;
+export default AddToCart;

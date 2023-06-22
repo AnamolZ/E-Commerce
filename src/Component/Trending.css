@@ -1,10 +1,16 @@
-.carousel{
+.carousel {
     margin-top: 60px;
-}
-
-@media (max-width: 991px) {
-    .carousel-item{
-        /* margin-top: 0%; */
-        width: 100%;
+    width: 80%;
+    margin-left: 10%;
+  }
+  
+  .carousel-item {
+    width: 100%;
+  }
+  
+  @media (max-width: 991px) {
+    .carousel-item {
+      width: 100%;
     }
-}
+  }
+  
