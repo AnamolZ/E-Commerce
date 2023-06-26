@@ -12,23 +12,19 @@ function OnSale(props) {
   const addToCartHandler = () => {
     setCartCount(cartCount + 0);
     onClick();
+    console.log(`Added "${itemname}" to the cart.`);
   };
 
   return (
     <div className="Saleshot">
       <img className="imgsaleshot" src={img} alt={itemname} />
-      <Link to={`/details/${itemId}/${lastElements}`} className="description">{trimmedItemName}</Link>
+      <Link to={`/details/${itemId}/${lastElements}`} className="description">
+        {trimmedItemName}
+      </Link>
       <p className="price">{price}</p>
       <div className="add-to-cart-container">
         <AddtoCart onAddToCart={addToCartHandler} />
       </div>
-      <nav>
-        <ul>
-          <li>
-            <div className="cart-count">{cartCount}</div>
-          </li>
-        </ul>
-      </nav>
     </div>
   );
 }
