@@ -1,4 +1,5 @@
 import React from 'react';
+import './AddtoCart.css';
 
 const AddToCart = React.memo(({ onAddToCart }) => {
   const handleClick = () => {
@@ -8,7 +9,9 @@ const AddToCart = React.memo(({ onAddToCart }) => {
   };
 
   return (
-    <button onClick={handleClick}>Add to Cart</button>
+    <button className="add-to-cart-button" onClick={handleClick}>
+      Add to Cart
+    </button>
   );
 });
 

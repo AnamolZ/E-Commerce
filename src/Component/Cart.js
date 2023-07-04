@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import './Cart.css';
 import AddtoCart from './AddtoCart';
 import productData from '../productData.json';
+import data from '../database.json';
+import OnSale from './OnSale';
 
 const productCache = {};
 
@@ -104,12 +106,39 @@ const Cart = (props) => {
               </div>
               <div className="buttons d-flex flex-row mt-5 gap-3">
                 <button className="btn btn-outline-dark">Buy Now</button>
-                <div className="btn btn-dark">
-                  <AddtoCart onAddToCart={addToCartHandler} />
+                <div className="btn btn-custom">
+                  <AddtoCart className="addtocart" onAddToCart={addToCartHandler} />
                 </div>
               </div>
             </div>
           </div>
+
+          <div className="container">
+            <ul className="items">
+              {data.images.map((item) => {
+                if (item.id === 90) {
+                  return (
+                    <li key={item.id}></li>
+                  );
+                }
+
+                return (
+                  <li key={item.id}>
+                    <OnSale
+                      itemname={item.itemname}
+                      price={`Rs ${item.price}`}
+                      img={item.img}
+                      cartCount={cartCount}
+                      setCartCount={setCartCount}
+                      onClick={() => addToCartHandler(item.id)}
+                    />
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+
+
         </div>
       </div>
     </div>
